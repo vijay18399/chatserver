@@ -10,7 +10,12 @@ var MessageSchema = new Schema({
   score: Number,
   spamcheck: String,
   createdAt: Date,
-  groupid:String
+  groupid:String,
+  isfile: { type: Boolean, default: false },
+  ext: String,
+  file: String,
+  original: String,
+  isdeleted: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model('Message', MessageSchema);
